@@ -12,17 +12,26 @@
 
     <!-- Open Graph -->
     <meta property="og:title"
-        content="Archive - DamonFish的博客 | DamonFish Blog">
+        content="weak-strong dance需注意的点 - DamonFish的博客 | DamonFish Blog">
     
-    <meta property="og:type" content="website">
-    <meta property="og:description"
-        content="「......」">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="概念
+">
+    
+    <meta property="article:published_time" content=" 2017-12-12T00:00:00Z">
+    
+    
+    <meta property="article:author" content="DamonFish">
+    
+    
+    <meta property="article:tag" content="iOS开发">
+    
     
     <meta property="og:image" content="http://localhost:4000https://avatars.githubusercontent.com/u/9314380?v=4">
-    <meta property="og:url" content="http://localhost:4000/archive/">
+    <meta property="og:url" content="http://localhost:4000/2017/12/12/weak-strong-dance/">
     <meta property="og:site_name" content="DamonFish的博客 | DamonFish Blog">
 
-    <title>Archive - DamonFish的博客 | DamonFish Blog</title>
+    <title>weak-strong dance需注意的点 - DamonFish的博客 | DamonFish Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -31,7 +40,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/archive/">
+    <link rel="canonical" href="http://localhost:4000/2017/12/12/weak-strong-dance/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href=" /css/bootstrap.min.css">
@@ -195,173 +204,409 @@
   </div>
 </div>
 
-    <!--
-Credits: this page shamelessly borrowed a lot from:
-https://github.com/kitian616/jekyll-TeXt-theme
--->
-<!-- Page Header -->
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-infinity.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
 
 
 
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('/img/bg-little-universe.jpg');
+        background-image: url('/img/post-bg-infinity.jpg');
         background: ;
     }
 
+    
+    header.intro-header .header-mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0, 0.3);
+    }
     
 </style>
 
 
 
 
+<header class="intro-header" >
 
-
-
-<header class="intro-header" style="background-image: url('/img/bg-little-universe.jpg')">
-  <div class="header-mask"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-        <div class="site-heading" id="tag-heading">
-        
-          <h1>Archive</h1>
-          <span class="subheading">「......」</span>
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=iOS%E5%BC%80%E5%8F%91" title="iOS开发">iOS开发</a>
+                        
+                    </div>
+                    <h1>weak-strong dance需注意的点</h1>
+                    
+                    <h2 class="subheading"></h2>
+                    <span class="meta">Posted by DamonFish on December 12, 2017</span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </header>
 
 
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<!-- Tags (as filter) -->
-			<div id='tag_cloud' class="tags tags-sup js-tags">
-				<a class="tag-button--all" data-encode="">
-					Show All
-					<sup>4</sup>
-				</a>
 
-				
-				
-				
-				
-				
-				<a data-sort="0003"
-					data-encode="%E5%A4%9A%E7%BA%BF%E7%A8%8B" class="tag-button" title="多线程"
-					rel="1">
-					多线程
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="%E9%94%81" class="tag-button" title="锁"
-					rel="1">
-					锁
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="Git" class="tag-button" title="Git"
-					rel="1">
-					Git
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="Project" class="tag-button" title="Project"
-					rel="1">
-					Project
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="iOS" class="tag-button" title="iOS"
-					rel="1">
-					iOS
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="iOS%E5%BC%80%E5%8F%91" class="tag-button" title="iOS开发"
-					rel="1">
-					iOS开发
-					<sup>1</sup>
-				</a>
-			</div>
 
-			<!-- Article List -->
-			<div class="mini-post-list js-result d-none"><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2024</span>
-					</span><div class="post-preview item" data-tags="%E5%A4%9A%E7%BA%BF%E7%A8%8B,%E9%94%81,iOS">
-						<a href="/2024/01/09/iOS-readwrite-lock/">
-							<h2 class="post-title">
-								iOS 读写锁
-							</h2>
-							
-							<h3 class="post-subtitle">
-								GCD 实现读写锁注意的坑
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2019</span>
-					</span><div class="post-preview item" data-tags="Git">
-						<a href="/2019/11/19/git-workflow/">
-							<h2 class="post-title">
-								Git 工作流程
-							</h2>
-							
-							<h3 class="post-subtitle">
-								Git Workflow
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2018</span>
-					</span><div class="post-preview item" data-tags="Project">
-						<a href="/2018/10/06/app-project-development/">
-							<h2 class="post-title">
-								App项目开发最佳实践
-							</h2>
-							
-							<h3 class="post-subtitle">
-								App Project Development Best Practices
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2017</span>
-					</span><div class="post-preview item" data-tags="iOS%E5%BC%80%E5%8F%91">
-						<a href="/2017/12/12/weak-strong-dance/">
-							<h2 class="post-title">
-								weak-strong dance需注意的点
-							</h2>
-							
-							<h3 class="post-subtitle">
-								
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section>
-			</div>
-		</div>
-	</div>
-</div>
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                
+
+				<h2 id="概念">概念</h2>
+
+<p>weak-strong dance用于处理闭包导致的循环引用。
+比如self持有了block，block同时持有了self，相互引用，无法释放造成内存泄漏。</p>
+
+<p>关于循环引用,这里主要讲在实际使用中需要注意的几点。</p>
+
+<h2 id="不是所有block里的self都需要weak">不是所有block里的self都需要weak</h2>
+
+<p>一般只有产生循环引用的场景，需要weak-strong dance。
+下面的三种场景是不会产生循环引用的.</p>
+
+<ol>
+  <li>
+    <p>如果block是非逃逸的，block不会持有self， 比如map，filter，reduce等block操作。这种block是立即执行的代码块，无需强持有self等到“后续”使用；</p>
+  </li>
+  <li>
+    <p>block是逃逸的，但是self不持有block，不需要。 例如系统相关方法的block， GCD的block或者UIView的动画block；</p>
+  </li>
+  <li>
+    <p>单例持有block，block持有self， 这种情况后续单独说；</p>
+  </li>
+</ol>
+
+<h2 id="单例和-weak-strong-dance">单例和 weak-strong dance</h2>
+
+<p>self事实上并不真的持有单例， self并不对单例负责。
+内存管理基本原则： 谁开辟，谁释放。 谁开辟，谁管理。
+block是单例开辟的，应该由单例管理并释放，与self无关。</p>
+
+<p>下面的例子即使self不持有block，但仍需要对self 进行weak-strong dance，不然会内存泄漏，
+     代码来自比较老的版本的极验登录。
+self持有单例（隐式）， 单例持有block， block持有self， 形成了循环引用。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>// 一键登录进入授权页面
+OneLoginManager.shared.requestToken(with: self, viewModel: viewModel) { [weak self] result in
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>同样是单例，SDWebImageManager 就不需要 weak-strong dance</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>[SDWebImageManager sharedManager loadImageWithURL:url
+                options:SDWebImageRetryFailed | SDWebImageAvoidDecodeImage
+               progress:nil
+              completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+                  [self doSomething];
+         }];
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>AFNetwoking中的我们一般封装一个请求的单例继承自AFHTTPSessionManager，请求的回调block中也不需要 weak-strong dance。</p>
+
+<p>所以一键登录例子中的Manager应该管理block的释放，不应需要 weak-strong dance的，其写法有缺陷。</p>
+
+<p>如果你去查看其他无需 weak-strong dance的源码，你会发现清除block的代码，类似：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>self.completionBlock = nil;
+
+
+if (self.completionBlock) {
+ LOTAnimationCompletionBlock completion = self.completionBlock;
+ self.completionBlock = nil;
+ completion(complete);
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>自己开辟的block自己释放。</p>
+
+<h2 id="weak-strong-dance-来加快self释放">weak-strong dance 来加快self释放</h2>
+
+<p>前面讲到了， 非self持有的block， 没有循环引用，一般无需对self进行weak-strong dance。
+但是下面一个场景：
+进入到某viewController后，请求了一个接口。然后迅速退出了该viewController。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>override func viewDidLoad() {
+  super.viewDidLoad()
+
+  // 没有使用weak-strong dance，退出viewController后， self会等到请求回调block执行后才会释放。
+  ResourceManager.shared().fetch() { (result, downloadError) in
+  // 做一些繁重的任务
+   self.doSomeCompletethings()
+ }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>退出viewController后，因为self被block持有了， 请求和回调中繁重的任务还是继续执行， 浪费资源。
+这里虽然没有循环引用，但self的释放被延后了。可借助weak-strong dance 让self尽快释放。</p>
+
+<p>解决方法：
+不强制持有self， 从而取消请求回调的执行。</p>
+
+<p>网络请求发送后，实际上是无法真正cancel的，我们能cancel掉回调，cancel掉这个请求的task。
+   cancel方法应在dealloc中调用， 但是这里block持有self，dealloc执行时请求回调已结束。</p>
+
+<p>如果是这种情况， block不应强持有self。 请求回调执行时，self已经释放，会取消请求回调的后续执行。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>// 没有使用weak-strong dance，退出viewController后， self会等到请求回调block执行后才会释放。
+ResourceManager.shared().fetch() { [weak self] (result, downloadError) in
+   guard let self = self else { return }
+   // 做一些繁重的任务
+   self.doSomeComplicated()
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>添加weak-strong dance后， 会在判断self是否存在时候返回，不会执行doSomeComplicated</p>
+
+<p>当然，这并不完美。 
+比较好的方式是在合适的地方，由ResourceManager自己取消整个任务。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>// 在退出时或者其他合适的地方调用
+ResourceManager.shared().cancelFetch()
+ResourceManager.shared().fetchCompletion = nil
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>显式的取消是比较麻烦的。
+如果你有兴趣了解自动取消，比如取消请求，取消观察之类的。
+请参阅KVOController， 或者RXSwift（Moya）disposeBag的相关实现方式。</p>
+
+<h2 id="多层嵌套的-weak-strong-dance-补充">多层嵌套的 weak-strong dance （补充）</h2>
+
+<p>多层block嵌套的时候注意 weak-strong dance不要漏掉了</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre>self.taskOne { [weak self] in
+   guard let self = self else { return }
+   
+   // 下面写了N行
+   //
+   //
+   //
+   
+   // taskTwo的weak-strong dance 不小心漏掉了
+   self.taskTwo {
+      self.doSomething()
+   }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>你可能觉得这不太可能， 新版本的Swift 5.8的写法， 是能省略掉self的。
+看下面的写法， 漏掉weak-strong dance可能就看上去就更自然。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>self.taskOne { [weak self] in
+   guard let self else { return }
+   
+   // 下面写了N行
+   //
+   //
+   //
+   taskTwo {
+       
+   }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/10/06/app-project-development/" data-toggle="tooltip" data-placement="top" title="App项目开发最佳实践">
+                        Next<br>
+                        <span>App项目开发最佳实践</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5>Hi</h5>
+<ul class="list-inline">
+  
+</ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    SVG: {
+      scale: 90
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG">
+</script>
+
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'right',
+          // icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
@@ -453,18 +698,6 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 
 
-
-<!-- jquery.tagcloud.js -->
-<script>
-    async('/js/jquery.tagcloud.js', function () {
-        $.fn.tagcloud.defaults = {
-            //size: {start: 1, end: 1, unit: 'em'},
-            color: { start: '#bbbbee', end: '#2f93b4' },
-        };
-        $('#tag_cloud a').tagcloud();
-    })
-</script>
-<script src='/js/archive.js '></script>
 
 
 <!--fastClick.js -->

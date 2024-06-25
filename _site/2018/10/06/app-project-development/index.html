@@ -12,17 +12,33 @@
 
     <!-- Open Graph -->
     <meta property="og:title"
-        content="Archive - DamonFish的博客 | DamonFish Blog">
+        content="App项目开发最佳实践 - DamonFish的博客 | DamonFish Blog">
     
-    <meta property="og:type" content="website">
-    <meta property="og:description"
-        content="「......」">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="今天主要讲下面几点：
+
+  自动化（CI和CD）
+  规范化（Format，Lint，Sonarcube）
+  组件化（内部库）
+  版本控制（Git Flow）
+  测试（单元测试，UI测试）
+
+">
+    
+    <meta property="article:published_time" content=" 2018-10-06T00:00:00Z">
+    
+    
+    <meta property="article:author" content="DamonFish">
+    
+    
+    <meta property="article:tag" content="Project">
+    
     
     <meta property="og:image" content="http://localhost:4000https://avatars.githubusercontent.com/u/9314380?v=4">
-    <meta property="og:url" content="http://localhost:4000/archive/">
+    <meta property="og:url" content="http://localhost:4000/2018/10/06/app-project-development/">
     <meta property="og:site_name" content="DamonFish的博客 | DamonFish Blog">
 
-    <title>Archive - DamonFish的博客 | DamonFish Blog</title>
+    <title>App项目开发最佳实践 - DamonFish的博客 | DamonFish Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -31,7 +47,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/archive/">
+    <link rel="canonical" href="http://localhost:4000/2018/10/06/app-project-development/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href=" /css/bootstrap.min.css">
@@ -67,8 +83,8 @@
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+    
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -195,18 +211,18 @@
   </div>
 </div>
 
-    <!--
-Credits: this page shamelessly borrowed a lot from:
-https://github.com/kitian616/jekyll-TeXt-theme
--->
-<!-- Page Header -->
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
 
 
 
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('/img/bg-little-universe.jpg');
+        background-image: url('/img/home-bg.jpg');
         background: ;
     }
 
@@ -216,152 +232,328 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 
 
+<header class="intro-header style-text" >
 
-
-
-<header class="intro-header" style="background-image: url('/img/bg-little-universe.jpg')">
-  <div class="header-mask"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-        <div class="site-heading" id="tag-heading">
-        
-          <h1>Archive</h1>
-          <span class="subheading">「......」</span>
+    <div class="header-mask"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/archive/?tag=Project" title="Project">Project</a>
+                        
+                    </div>
+                    <h1>App项目开发最佳实践</h1>
+                    
+                    <h2 class="subheading">App Project Development Best Practices</h2>
+                    <span class="meta">Posted by DamonFish on October 6, 2018</span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </header>
 
 
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<!-- Tags (as filter) -->
-			<div id='tag_cloud' class="tags tags-sup js-tags">
-				<a class="tag-button--all" data-encode="">
-					Show All
-					<sup>4</sup>
-				</a>
 
-				
-				
-				
-				
-				
-				<a data-sort="0003"
-					data-encode="%E5%A4%9A%E7%BA%BF%E7%A8%8B" class="tag-button" title="多线程"
-					rel="1">
-					多线程
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="%E9%94%81" class="tag-button" title="锁"
-					rel="1">
-					锁
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="Git" class="tag-button" title="Git"
-					rel="1">
-					Git
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="Project" class="tag-button" title="Project"
-					rel="1">
-					Project
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="iOS" class="tag-button" title="iOS"
-					rel="1">
-					iOS
-					<sup>1</sup>
-				</a>
-				
-				<a data-sort="0003"
-					data-encode="iOS%E5%BC%80%E5%8F%91" class="tag-button" title="iOS开发"
-					rel="1">
-					iOS开发
-					<sup>1</sup>
-				</a>
-			</div>
 
-			<!-- Article List -->
-			<div class="mini-post-list js-result d-none"><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2024</span>
-					</span><div class="post-preview item" data-tags="%E5%A4%9A%E7%BA%BF%E7%A8%8B,%E9%94%81,iOS">
-						<a href="/2024/01/09/iOS-readwrite-lock/">
-							<h2 class="post-title">
-								iOS 读写锁
-							</h2>
-							
-							<h3 class="post-subtitle">
-								GCD 实现读写锁注意的坑
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2019</span>
-					</span><div class="post-preview item" data-tags="Git">
-						<a href="/2019/11/19/git-workflow/">
-							<h2 class="post-title">
-								Git 工作流程
-							</h2>
-							
-							<h3 class="post-subtitle">
-								Git Workflow
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2018</span>
-					</span><div class="post-preview item" data-tags="Project">
-						<a href="/2018/10/06/app-project-development/">
-							<h2 class="post-title">
-								App项目开发最佳实践
-							</h2>
-							
-							<h3 class="post-subtitle">
-								App Project Development Best Practices
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section><section>
-					<span class="fa listing-seperator">
-						<span class="tag-text">2017</span>
-					</span><div class="post-preview item" data-tags="iOS%E5%BC%80%E5%8F%91">
-						<a href="/2017/12/12/weak-strong-dance/">
-							<h2 class="post-title">
-								weak-strong dance需注意的点
-							</h2>
-							
-							<h3 class="post-subtitle">
-								
-							</h3>
-							
-						</a>
-						<hr>
-					</div></section>
-			</div>
-		</div>
-	</div>
-</div>
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                
+
+				<p>今天主要讲下面几点：</p>
+<ol>
+  <li>自动化（CI和CD）</li>
+  <li>规范化（Format，Lint，Sonarcube）</li>
+  <li>组件化（内部库）</li>
+  <li>版本控制（Git Flow）</li>
+  <li>测试（单元测试，UI测试）</li>
+</ol>
+
+<h2 id="自动化ci和cd">自动化（CI和CD）</h2>
+
+<p>个人常用的自动化平台是CircleCI和Jenkins。
+Jenkins是免费的，免费工具的最大优点通常就是免费。 很多插件已经比较古老了。 比如自搭server的Gitlab， MRrequest检测插件很久都没人更新，最好还是按照热心网友在github提的一个pr，然后自己按照pr内容从新编译了一个新的插件。
+如果有更好的选择，不推荐使用。</p>
+
+<p>CircleCI也很老牌了， 和Bitbucket全家桶在国外算是标配了。
+功能强大，文档全。</p>
+
+<p>个人用的config配置，仅作参考
+<a href="https://gist.github.com/DamonFish/5fada002fa6dd045822ccb69e496f044">Config</a></p>
+
+<p>当然，在App端，自动化平台都依赖Fastlane，没有ta， 寸步难行啊。
+其实App端的自动化就是：
+Fastlane + CI/CD工具。</p>
+
+<p>当然大厂可能会用自己的平台和工具。</p>
+
+<h2 id="规范化formatlintsonarqube">规范化（Format，Lint，SonarQube）</h2>
+
+<p>简单讲就是代码的规范化；
+代码格式化（Format）和代码规范检查（Lint），一般你不是用Xcode就不用特别在意，因为其他平台的开发工具都自带Format和Lint，或者提供插件。
+可是Xcode，连format都不给！</p>
+
+<p>你需要安装<a href="https://github.com/nicklockwood/SwiftFormat">SwiftFormat</a>，<a href="https://github.com/realm/SwiftLint">SwiftLint</a>，然后在工程里做配置脚本。</p>
+
+<p>个人的SwiftFormat 配置</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>if [ "${CONFIGURATION}" = "Debug" ]; then
+
+"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat" --disable unusedArguments,initCoderUnavailable,andOperator,trailingClosures,redundantReturn --nospaceoperators "...,..&lt;" --swiftversion "5.0" "${SRCROOT}/Project/"
+
+echo "format debug build swift code"
+
+else
+
+echo "Not Debug Env, skip format"
+
+fi
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>个人的<a href="https://gist.github.com/DamonFish/df081b716551cc2c2377ea3a186d1ecd">SwiftLint</a>配置</p>
+
+<p>部分代码</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>disabled_rules:
+  - unused_closure_parameter
+  - trailing_comma 
+  - force_cast
+  - opening_brace
+  - large_tuple
+  - inclusive_language
+#  - trailing_whitespace
+#  - todo
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="组件化内部库">组件化（内部库）</h2>
+
+<p>就是模块化后，将基础模块封装成库，提供给多个工程或者多个团队使用。</p>
+
+<p>iOS常用的方式就是利用cocoapod做私用库，需要私用库spec仓库。 或者指定tag。
+总之，利用cocoapod是加载这些库。</p>
+
+<p>可以组件化的库一般分两种：</p>
+<ol>
+  <li>基础设施库， 例如： 网络功能，日志，路由， debug模块，数据库模块， 文件操作等</li>
+  <li>基础功能库， 例如： 网络请求模块（带基础业务功能）， 登陆模块， 账号管理模块， 会员内购模块， 分享功能等</li>
+</ol>
+
+<p>这里需要指出的是，写代码给自己用和给一群人用，完全是两个概念。
+给一群人用其实是写SDK，SDK用户的需求多变，场景复杂， 版本兼容。 稳定性，兼容性， 扩展性，都是另一个级别。 
+到时候，你能更深刻的了解KISS原则，代码设计六大原则这些是怎么来的。
+这里不展开讨论了。</p>
+
+<h2 id="版本控制">版本控制</h2>
+
+<p>关于git工作流会在另一篇文章中单独讲。</p>
+
+<p>这里说几个注意点：</p>
+
+<ol>
+  <li>团队的git水平应该达到工作流程需要的水平之上；
+讲个极端例子，如果团队都是用SVN的，那就谨慎考虑git，先培训分享吧。</li>
+  <li>权限控制，
+仍然是极端例子： 我第一次丝滑的删除了Bitbucket上的项目时， 意识到了这一点； 相比之下Github好很多。
+权限必须要控制，实习生真的能删库跑路。</li>
+  <li>流程开始不要追求完美， 流程的制定是结合实际情况的，该调整得调整</li>
+</ol>
+
+<h2 id="测试单元测试ui测试集成测试">测试（单元测试，UI测试，集成测试）</h2>
+
+<p>先抛却技术层面，应该严肃对待测试的重要性。这个也说给我自己听。
+尊重QA人员， 应该互相尊重，都是打工人。 开发和测试，应该是相辅相成的关系。</p>
+
+<p>技术层面上讲， TDD的思想能反过来让开发从另一个角度考虑代码结构和质量。 
+曾经在客户端，特别是iOS， 单元测试是很鸡肋的东西，官方的支持很少。
+但是这个时代已经彻底过去了， 应该跟上时代了。 官方的测试框架已经比较好用了；</p>
+
+<p>目前我对测试的看法是， 
+工具类， 数据相关， 单元测试是很必要的。
+UI测试是实用性不佳，另外国内对Accessibility的支持比较少；所以目前不是很必要。</p>
+
+<p>另外经验上讲：
+每次发布版本，要考虑几个步骤必须测试</p>
+<ol>
+  <li>新账号的注册和使用，被坑过几次了</li>
+  <li>大规模的修改，要通知测试配合，最好一蹴而就，不要牵连多个版本。</li>
+</ol>
+
+<h2 id="个人经验其他">个人经验，其他</h2>
+
+<ol>
+  <li>
+    <p>工程目录和模版，层次不要太深
+建议工程目录按照功能模块分， 功能模块文件夹下放mvc/mvvm文件夹， 目录不要太深。 公用的放外层公用文件夹。 其他没有强制要求。</p>
+  </li>
+  <li>
+    <p>第三方库的维护
+版本使用稳定版本；
+第三方库发布最新版本后，至少经过两周后再升级； 这个让我们避免很多次被坑，第三方库的稳定性无法保证的，经过一段时间验证后再使用。
+定期更新，避免差距在大版本号之上，版本差距最好不要超过两个小版本号；
+注意查看第三方库的release notes和issues列表；</p>
+  </li>
+  <li>
+    <p>添加或者修改底层重要的框架或库
+需要通知其他开发人员，最好大家一起评估必要性和影响。 如果修改和替换需要花较长时间，认真评估和排期，尽快的全部修改掉， 避免新旧实现共存太久。</p>
+  </li>
+  <li>
+    <p>提PR前，可以先跟自己讲一个遍， 我称之为费曼提PR法。</p>
+  </li>
+  <li>
+    <p>前期避免过早不必要的优化，收敛好战之心。</p>
+  </li>
+  <li>
+    <p>提倡使用新技术， 新技术的采用者请务必调研清楚； 请让整个团队在新技术的能力在某一个水平之上，最好有最佳实践手册。</p>
+  </li>
+</ol>
+
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2017/12/12/weak-strong-dance/" data-toggle="tooltip" data-placement="top" title="weak-strong dance需注意的点">
+                        Previous<br>
+                        <span>weak-strong dance需注意的点</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2019/11/19/git-workflow/" data-toggle="tooltip" data-placement="top" title="Git 工作流程">
+                        Next<br>
+                        <span>Git 工作流程</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <hr style="visibility: hidden;">
+
+                
+
+                
+            </div>  
+
+    <!-- Side Catalog Container -->
+        
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+
+
+                <!-- Friends Blog -->
+                
+<hr>
+<h5>Hi</h5>
+<ul class="list-inline">
+  
+</ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax by voleking-->
+
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'right',
+          // icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
@@ -453,18 +645,6 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 
 
-
-<!-- jquery.tagcloud.js -->
-<script>
-    async('/js/jquery.tagcloud.js', function () {
-        $.fn.tagcloud.defaults = {
-            //size: {start: 1, end: 1, unit: 'em'},
-            color: { start: '#bbbbee', end: '#2f93b4' },
-        };
-        $('#tag_cloud a').tagcloud();
-    })
-</script>
-<script src='/js/archive.js '></script>
 
 
 <!--fastClick.js -->

@@ -6,23 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员">
-    <meta name="keywords" content="黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, 前端, 设计">
+    <meta name="description" content="这里是 DamonFish的Blog">
+    <meta name="keywords" content="DamonFish的博客, DamonFish Blog, 博客, 个人网站, 互联网, Web, iOS, App, 架构, 开发">
     <meta name="theme-color" content="#000000">
 
     <!-- Open Graph -->
     <meta property="og:title"
-        content="黄玄的博客 | Hux Blog">
+        content="DamonFish的博客 | DamonFish Blog">
     
     <meta property="og:type" content="website">
     <meta property="og:description"
-        content="「离开世界之前 一切都是过程」">
+        content="「Funny」">
     
-    <meta property="og:image" content="http://localhost:4000https://github.com/Huxpro.png">
+    <meta property="og:image" content="http://localhost:4000https://avatars.githubusercontent.com/u/9314380?v=4">
     <meta property="og:url" content="http://localhost:4000/">
-    <meta property="og:site_name" content="黄玄的博客 | Hux Blog">
+    <meta property="og:site_name" content="DamonFish的博客 | DamonFish Blog">
 
-    <title>黄玄的博客 | Hux Blog</title>
+    <title>DamonFish的博客 | DamonFish Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -78,7 +78,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Hux Blog</a>
+                <a class="navbar-brand" href="/">DamonFish Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -101,12 +101,6 @@
                         <li>
                             <a href="/archive/">Archive</a>
                         </li>
-                        
-                        
-                        
-                        
-                        
-                        
                         
                         
                         
@@ -229,8 +223,8 @@
         
         <div class="site-heading">
         
-          <h1>Hux Blog</h1>
-          <span class="subheading">「离开世界之前 一切都是过程」</span>
+          <h1>DamonFish Blog</h1>
+          <span class="subheading">「Funny」</span>
         </div>
       </div>
     </div>
@@ -250,290 +244,152 @@
       col-xs-12 postlist-container">
       
 <div class="post-preview">
-    <a href="/2021/04/10/js-20yrs-preface/">
+    <a href="/2024/01/09/iOS-readwrite-lock/">
         <h2 class="post-title">
-            《JavaScript 二十年》推荐语
+            iOS 读写锁
         </h2>
+        
+        <h3 class="post-subtitle">
+            GCD 实现读写锁注意的坑
+        </h3>
         
         <div class="post-content-preview">
             
-                
-  雪碧（doodlewind）邀请我给《JavaScript 二十年》 写的推荐序。
+                概念
+读写锁用于解决读写问题。读操作可并发重入，写操作是互斥的。
+这意味着多个线程可以同时读数据，但写数据时需要获得一个独占的锁。
+
+能同时多个线程读，
+只能同时一个线程写（修改）.
+不能同时一个线程写，一个线程读。
+
+多读单写
+读写锁常见的用法是控制线程对内存中的某种数据结构的访问.
+
+实现方式
 
 
-JavaScript 常常被戏称为一门偶然成功的玩具语言。而实际上，它出身名门，更是成长在聚光灯之下。纵观历史，有资格被标准化的编程语言甚少，它因此成为多方角力的战场，却也有幸同时得到业界与学界先驱的亲传。时至今日，我们甚至难言是它背负了太多妥协，还是这些妥协才成就了它呢。以史为鉴，或许你会有自己的...
+  pthread_rwlock， 专门的读写锁
+  dispatch_barrier_a...
             
         </div>
     </a>
     <p class="post-meta">
-        Posted by Hux on April 10, 2021
+        Posted by DamonFish on January 9, 2024
     </p>
 </div>
 <hr>
 
 <div class="post-preview">
-    <a href="/2020/07/05/reflection-2020/">
+    <a href="/2019/11/19/git-workflow/">
         <h2 class="post-title">
-            作为一个前端，看不懂@黄玄 的几乎每一个回答，只有我自己吗？
+            Git 工作流程
         </h2>
         
         <h3 class="post-subtitle">
-            Taking this chance to reflect on myself
+            Git Workflow
         </h3>
         
         <div class="post-content-preview">
             
-                
-  这篇文章转载自我在知乎上的回答
+                Git flow/ workflow；
+Git 工作流程是团队在使用 Git 进行版本控制时商定的一个统一工作流程。
+这个工作流程可以自定义，也可以使用已经定义好的流程，最重要的是适合你的项目。
+
+这个流程主要是针对分支管理策略。
+
+常见的 Git 工作流程有三种：
 
 
-我也看不懂。
+  Git flow
+  GitHub flow
+  GitLab flow
 
-对于任何一个我有一定了解的领域，我都知道一大堆我看不懂的东西。反而是对于那些我一点都不了解的，我甚至都说不出来我不懂什么。
 
-有的时候我会觉得，在我眼里还只有前端的时候，我还更自信更爱分享一点。可能因为那时候我能感知到的「边界」就只有 2^4 = 16 这么大，还觉得自己满打满算已经懂了 4 吧。打个比喻的话就是觉得自己已经能干活了，...
+Git flow
+
+最传统的 Git 工...
             
         </div>
     </a>
     <p class="post-meta">
-        Posted by Hux on July 5, 2020
+        Posted by DamonFish on November 19, 2019
     </p>
 </div>
 <hr>
 
 <div class="post-preview">
-    <a href="/2020/04/03/react-hooks-vue-composition/">
+    <a href="/2018/10/06/app-project-development/">
         <h2 class="post-title">
-            React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现？
+            App项目开发最佳实践
         </h2>
         
         <h3 class="post-subtitle">
-            Thinking in React vs. Thinking in Vue
+            App Project Development Best Practices
         </h3>
         
         <div class="post-content-preview">
             
-                
-  这篇文章转载自我在知乎上的回答
+                今天主要讲下面几点：
+
+  自动化（CI和CD）
+  规范化（Format，Lint，Sonarcube）
+  组件化（内部库）
+  版本控制（Git Flow）
+  测试（单元测试，UI测试）
 
 
-不能，因为是很不一样的心智模型（Mental Model）。我觉得很多同学只关注到了这两套 API 在功能上都能复用逻辑的相似点，而低估了两个框架体系「大背景」上的差异。
+自动化（CI和CD）
 
-正文开始前我先声明一下，
+个人常用的自动化平台是CircleCI和Jenkins。
+Jenkins是免费的，免费工具的最大优点通常就是免费。 很多插件已经比较古老了。 比如自搭server的Git...
+            
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by DamonFish on October 6, 2018
+    </p>
+</div>
+<hr>
+
+<div class="post-preview">
+    <a href="/2017/12/12/weak-strong-dance/">
+        <h2 class="post-title">
+            weak-strong dance需注意的点
+        </h2>
+        
+        <h3 class="post-subtitle">
+            
+        </h3>
+        
+        <div class="post-content-preview">
+            
+                概念
+
+weak-strong dance用于处理闭包导致的循环引用。
+比如self持有了block，block同时持有了self，相互引用，无法释放造成内存泄漏。
+
+关于循环引用,这里主要讲在实际使用中需要注意的几点。
+
+不是所有block里的self都需要weak
+
+一般只有产生循环引用的场景，需要weak-strong dance。
+下面的三种场景是不会产生循环引用的.
 
 
   
-    一是本文观点不代表公司。我是觉得圈子里不认同 Hooks 的声音太多了（比如 @徐飞 叔叔、 @贺师俊 贺老、 @题叶 同学等老朋友 ...
+  ...
             
         </div>
     </a>
     <p class="post-meta">
-        Posted by Hux on April 3, 2020
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2019/11/19/is-pwa-dead-in-2019/">
-        <h2 class="post-title">
-            2019 年 PWA(Progressive Web App) 凉了吗？
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Is PWA effectively dead in 2019?
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  这篇文章转载自我在知乎上的回答
-
-
-作为 PWA 在国内的早期布道者与实践者，我觉得挺凉的。
-以下都是主观感受且 opinion is my own。
-
-PWA（甚至整个 Web）似乎被 Google（Chrome）与「第三世界」绑到一起去了。「这世界还有多少人没上过网、没有 4G、没有 3G……印度、印度尼西亚、非洲、乌干达……」这便是这两年的 Chrome Dev Summit 的...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on November 19, 2019
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2019/09/03/vim-from-finder/">
-        <h2 class="post-title">
-            把「终端下的 Vim」作为 macOS Finder 的打开方式
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Open file with terminal Vim from the macOS Finder
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                我的日常主力编辑器主要是：
-
-
-  (Neo)Vim
-  Spacemacs (via Emacs-plus)
-  Visual Studio Code
-  IntelliJ IDEA
-
-
-这里面只有 (Neo)Vim 是存活在终端中的（我并不在终端内使用 Emacs），而由于我日常主要是从终端（via iTerm）来使用电脑，所以会把他们都加入到 $PATH 里以方便从终端中唤起，VSCo...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on September 3, 2019
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/10/06/vim-cn-im/">
-        <h2 class="post-title">
-            Vim 与中文输入法
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Using Vim with non-english input method
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                Update: 我最后还是放弃把 Vim 作为主要编辑器来输入中文了，整体使用下来 mental model 的 cost 太重了。记笔记时用用中文呀或者改改博客时偶尔用一下还蛮去，这个时候这个功能至少能帮助你 Esc 之后不煞笔，所以也不算完全没有价值吧……
-
-
-
-我相信很多中文世界的 Vimer 都遇到过这个烦恼，在 vim 的 insert 模式时可能突然想输个中文，输完之后会本能的...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on October 6, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/09/27/avoiding-success-at-all-cost/">
-        <h2 class="post-title">
-            Avoiding success at all cost
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Watching "Escape from the Ivory Tower: The Haskell Journey"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                “Avoiding success at all cost” is the informal motto behinds Haskell. It could be parenthesized in two ways, either “Avoiding (success at all cost)” or “(Avoiding sucess) (at all cost)”.
-
-I’m not going to interpret them directly but rather to share some thoughts on “the success vs. costs” basing ...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on September 27, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/06/30/dreamer/">
-        <h2 class="post-title">
-            程序员中的梦想家
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Dreamers among programmers
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  本文首发于我的知乎专栏 The Little Programmer，转载请保留链接 ;)
-
-
-有一类程序员是 visionary 型的，为了实现一些超前的 idea，绕过某些技术的限制，他们写的 code 晦涩高深得只有他们自己能懂，做出来的 tool 看上去很美好结果处处是坑出了 bug 根本没法查，但正是这类人不断创造出新的东西，在洗礼之后成为一个个 big thing。
-
-我每周...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on June 30, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2018/05/11/pwa-zh-preface/">
-        <h2 class="post-title">
-            《PWA 实战》推荐序
-        </h2>
-        
-        <div class="post-content-preview">
-            
-                
-  「博文视点」邀请我给《PWA实战：面向下一代的Progressive Web APP》 写的推荐序。
-
-
-Progressive Web App 是继 Ajax、响应式设计、HTML5 之后，web 平台的又一次革命性突破。它在开放 Web 标准的基础之上，突破了以往 Web 应用只能「依赖互联网分发」与「依赖浏览器为入口」的两大桎梏，一下子打开了 Web 应用从性能、架构到用户体验...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on May 11, 2018
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2017/12/12/uncomputable-funcs/">
-        <h2 class="post-title">
-            如何证明不可计算的函数比可计算的函数多？
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Why is there more uncomputable functions?
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  这篇文章转载自我在知乎上的回答
-
-
-严谨的证明的话，可以使用「形式语言」（Formal language）来证明：
-
-在可计算理论和计算复杂度理论中，每个「计算问题」都被描述为一个一个「形式语言」，即字符串的集合。比如对于判断一个图是否是无向连通图这个问题：我们可以写为一个描述所有无向连通图的集合：
-
-\[A = \{ \langle G \rangle \vert G \text{ ...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Hux on December 12, 2017
+        Posted by DamonFish on December 12, 2017
     </p>
 </div>
 <hr>
 
 
 <!-- Pager -->
-
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
 
 
     </div>
@@ -544,138 +400,6 @@ Progressive Web App 是继 Ajax、响应式设计、HTML5 之后，web 平台的
       
 
 
-<section>
-    
-    <h5><a href="/archive/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-        
-        
-        
-        
-        
-                <a data-sort="0065" 
-                    href="/archive/?tag=%E7%9F%A5%E4%B9%8E"
-                    title="知乎"
-                    rel="14">知乎</a>
-        
-                <a data-sort="0039" 
-                    href="/archive/?tag=%E7%AC%94%E8%AE%B0"
-                    title="笔记"
-                    rel="40">笔记</a>
-        
-                <a data-sort="0043" 
-                    href="/archive/?tag=Coq"
-                    title="Coq"
-                    rel="36">Coq</a>
-        
-                <a data-sort="0043" 
-                    href="/archive/?tag=SF+%28%E8%BD%AF%E4%BB%B6%E5%9F%BA%E7%A1%80%29"
-                    title="SF (软件基础)"
-                    rel="36">SF (软件基础)</a>
-        
-                <a data-sort="0057" 
-                    href="/archive/?tag=Web"
-                    title="Web"
-                    rel="22">Web</a>
-        
-                <a data-sort="0060" 
-                    href="/archive/?tag=PLF+%28%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%29"
-                    title="PLF (编程语言基础)"
-                    rel="19">PLF (编程语言基础)</a>
-        
-                <a data-sort="0063" 
-                    href="/archive/?tag=LF+%28%E9%80%BB%E8%BE%91%E5%9F%BA%E7%A1%80%29"
-                    title="LF (逻辑基础)"
-                    rel="16">LF (逻辑基础)</a>
-        
-                <a data-sort="0071" 
-                    href="/archive/?tag=PWA"
-                    title="PWA"
-                    rel="8">PWA</a>
-        
-                <a data-sort="0073" 
-                    href="/archive/?tag=%E4%BA%A7%E5%93%81"
-                    title="产品"
-                    rel="6">产品</a>
-        
-                <a data-sort="0073" 
-                    href="/archive/?tag=UX%2FUI"
-                    title="UX/UI"
-                    rel="6">UX/UI</a>
-        
-                <a data-sort="0075" 
-                    href="/archive/?tag=JavaScript"
-                    title="JavaScript"
-                    rel="4">JavaScript</a>
-        
-                <a data-sort="0075" 
-                    href="/archive/?tag=Meta"
-                    title="Meta"
-                    rel="4">Meta</a>
-        
-                <a data-sort="0075" 
-                    href="/archive/?tag=Slides"
-                    title="Slides"
-                    rel="4">Slides</a>
-        
-                <a data-sort="0076" 
-                    href="/archive/?tag=%E8%AF%91"
-                    title="译"
-                    rel="3">译</a>
-        
-                <a data-sort="0076" 
-                    href="/archive/?tag=%E9%98%BF%E9%87%8C"
-                    title="阿里"
-                    rel="3">阿里</a>
-        
-                <a data-sort="0077" 
-                    href="/archive/?tag=%E5%9F%BA%E7%A1%80"
-                    title="基础"
-                    rel="2">基础</a>
-        
-                <a data-sort="0077" 
-                    href="/archive/?tag=%E5%BE%AE%E4%BF%A1"
-                    title="微信"
-                    rel="2">微信</a>
-        
-                <a data-sort="0077" 
-                    href="/archive/?tag=%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA"
-                    title="计算理论"
-                    rel="2">计算理论</a>
-        
-                <a data-sort="0077" 
-                    href="/archive/?tag=C"
-                    title="C"
-                    rel="2">C</a>
-        
-                <a data-sort="0077" 
-                    href="/archive/?tag=C%2B%2B"
-                    title="C++"
-                    rel="2">C++</a>
-        
-                <a data-sort="0077" 
-                    href="/archive/?tag=CSS"
-                    title="CSS"
-                    rel="2">CSS</a>
-        
-                <a data-sort="0077" 
-                    href="/archive/?tag=En"
-                    title="En"
-                    rel="2">En</a>
-        
-                <a data-sort="0077" 
-                    href="/archive/?tag=Vim"
-                    title="Vim"
-                    rel="2">Vim</a>
-        
-                <a data-sort="0077" 
-                    href="/archive/?tag=hUX+%E9%9A%8F%E6%83%B3%E5%BD%95"
-                    title="hUX 随想录"
-                    rel="2">hUX 随想录</a>
-    </div>
-</section>
-
 
       <!-- Short About -->
       <section class="visible-md visible-lg">
@@ -683,10 +407,10 @@ Progressive Web App 是继 Ajax、响应式设计、HTML5 之后，web 平台的
   <h5><a href="/about/">ABOUT ME</a></h5>
   <div class="short-about">
     
-    <img src="https://github.com/Huxpro.png" />
+    <img src="https://avatars.githubusercontent.com/u/9314380?v=4" />
     
     
-    <p>要做一个有 swag 的程序员 <br> React Team @ Meta</p>
+    <p>DamonFish</p>
     
     <!-- SNS Link -->
     
@@ -697,45 +421,9 @@ Progressive Web App 是继 Ajax、响应式设计、HTML5 之后，web 平台的
 
   
   
-  <li>
-    <a href="https://twitter.com/huxpro">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="https://www.zhihu.com/people/huxpro">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa  fa-stack-1x fa-inverse">知</i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="http://weibo.com/huxpro">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
   
   
   
-  <li>
-    <a target="_blank" href="https://github.com/huxpro">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
   
   
 </ul>
@@ -745,24 +433,8 @@ Progressive Web App 是继 Ajax、响应式设计、HTML5 之后，web 平台的
       <!-- Friends Blog -->
       
 <hr>
-<h5>FRIENDS</h5>
+<h5>Hi</h5>
 <ul class="list-inline">
-  
-  <li><a href="http://mida.re/">乱序（Midare）</a></li>
-  
-  <li><a href="https://ebnbin.dev/">Ebn Zhang</a></li>
-  
-  <li><a href="http://kunq.me">Kun Qian</a></li>
-  
-  <li><a href="https://sherrywoo.me/">Sherry Woo</a></li>
-  
-  <li><a href="http://blog.smdcn.net">SmdCn</a></li>
-  
-  <li><a href="http://tiye.me/">JiyinYiyong</a></li>
-  
-  <li><a href="http://dhong.co">DHong Say</a></li>
-  
-  <li><a href="http://ingf.github.io/">尹峰以为</a></li>
   
 </ul>
 
@@ -798,57 +470,21 @@ Progressive Web App 是继 Ajax、响应式设计、HTML5 之后，web 平台的
 
   
   
-  <li>
-    <a href="https://twitter.com/huxpro">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="https://www.zhihu.com/people/huxpro">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa  fa-stack-1x fa-inverse">知</i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="http://weibo.com/huxpro">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
   
   
   
-  <li>
-    <a target="_blank" href="https://github.com/huxpro">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
   
   
 </ul>
 
                 <p class="copyright text-muted">
-                    Copyright &copy; Hux Blog 2024
-                    <br>
+                    Copyright &copy; DamonFish Blog 2024
+                    <!-- <br>
                     Powered by <a href="http://huangxuan.me">Hux Blog</a> |
                     <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
                         height="20px"
                         src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true">
-                    </iframe>
+                    </iframe> -->
                 </p>
             </div>
         </div>
@@ -924,8 +560,8 @@ Progressive Web App 是继 Ajax、响应式设计、HTML5 之后，web 平台的
 
 <script>
     // dynamic User by Hux
-    var _gaId = 'UA-49627206-1';
-    var _gaDomain = 'huangxuan.me';
+    var _gaId = 'UA-xxxxxx-xx';
+    var _gaDomain = 'damonfish.github.io';
 
     // Originial
     (function (i, s, o, g, r, a, m) {
