@@ -305,31 +305,31 @@ TinyPNG对web前端的童鞋再熟悉不过了，详细使用请参考官网。<
 23
 24
 25
-</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">os</span>
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">os</span>
 
-<span class="n">Const_Image_Format</span> <span class="o">=</span> <span class="p">[</span><span class="s">".png"</span><span class="p">,</span> <span class="s">"jpeg"</span><span class="p">,</span> <span class="s">"pdf"</span><span class="p">]</span>
-<span class="n">rootDir</span> <span class="o">=</span> <span class="s">"/Users/You/Documents/Images.xcassets"</span>
+<span class="n">Const_Image_Format</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">.png</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">jpeg</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">pdf</span><span class="sh">"</span><span class="p">]</span>
+<span class="n">rootDir</span> <span class="o">=</span> <span class="sh">"</span><span class="s">/Users/You/Documents/Images.xcassets</span><span class="sh">"</span>
 <span class="n">limit_size</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="mi">1024</span>
 <span class="n">limit_height</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">limit_width</span> <span class="o">=</span> <span class="mi">100</span>
  
 <span class="k">class</span> <span class="nc">FileFilt</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="k">pass</span>
-    <span class="k">def</span> <span class="nf">FilterFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dirr</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">parent</span><span class="p">,</span><span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="n">rootDir</span><span class="p">):</span>       
+    <span class="k">def</span> <span class="nf">FilterFile</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">dirr</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">parent</span><span class="p">,</span><span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="nf">walk</span><span class="p">(</span><span class="n">rootDir</span><span class="p">):</span>       
             <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span> <span class="p">:</span>
-                <span class="n">fileDir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">fileDir</span> <span class="ow">and</span> <span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">fileDir</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">Const_Image_Format</span> <span class="p">):</span>
-                    <span class="n">filesize</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">fileDir</span><span class="p">)</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="n">filesize</span> <span class="o">&gt;=</span> <span class="n">limit_size</span><span class="p">):</span>
-                        <span class="k">print</span><span class="p">(</span><span class="n">fileDir</span><span class="p">)</span>
+                <span class="n">fileDir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">fileDir</span> <span class="ow">and</span> <span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">splitext</span><span class="p">(</span><span class="n">fileDir</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">Const_Image_Format</span> <span class="p">):</span>
+                    <span class="n">filesize</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">getsize</span><span class="p">(</span><span class="n">fileDir</span><span class="p">)</span>
+                    <span class="nf">if </span><span class="p">(</span><span class="n">filesize</span> <span class="o">&gt;=</span> <span class="n">limit_size</span><span class="p">):</span>
+                        <span class="nf">print</span><span class="p">(</span><span class="n">fileDir</span><span class="p">)</span>
 
  
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">FileFilt</span><span class="p">()</span>
-    <span class="n">b</span><span class="p">.</span><span class="n">FilterFile</span><span class="p">(</span><span class="n">dirr</span> <span class="o">=</span> <span class="n">rootDir</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'execute finished.'</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nc">FileFilt</span><span class="p">()</span>
+    <span class="n">b</span><span class="p">.</span><span class="nc">FilterFile</span><span class="p">(</span><span class="n">dirr</span> <span class="o">=</span> <span class="n">rootDir</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">'</span><span class="s">execute finished.</span><span class="sh">'</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>后来发现有一个更简单的方法， find命令+tinyPNG-cli</p>
@@ -585,7 +585,7 @@ TinyPNG对web前端的童鞋再熟悉不过了，详细使用请参考官网。<
 </ul>
 
                 <p class="copyright text-muted">
-                    Copyright &copy; DamonFish Blog 2024
+                    Copyright &copy; DamonFish Blog 2025
                 </p>
             </div>
         </div>
